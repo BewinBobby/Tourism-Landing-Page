@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <title>Sunshine Vacation & Tourism</title>
+    <script>
+      $(document).on("scroll", function() {
+        var pageTop = $(document).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var tags = $(".tag");
+
+        for (var i = 0; i < tags.length; i++) {
+          var tag = tags[i];
+          if ($(tag).position().top < pageBottom) {
+            $(tag).addClass("visible");
+          } else {
+            $(tag).removeClass("visible");
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <section class="hero" id="hero">
+      <nav>
+        <div class="nav__logo">
+          <img src="assets/img/logo.png" alt="logo" />
+        </div>
+        <ul class="nav__links">
+          <li class="link"><a href="#hero">Home</a></li>
+          <li class="link"><a href="#about-us">About Us</a></li>
+          <li class="link"><a href="#packages">Destinations</a></li>
+          <li class="link"><a href="#contact-us">Contact Us</a></li>
+        </ul>
+        <!-- <div class="search">
+          <input type="text" placeholder="Search" />
+          <span><i class="ri-search-line"></i></span>
+        </div> -->
+        <!-- <div class="login">
+          <span><i class="ri-user-3-fill"></i></span>
+          Log In
+        </div> -->
+        <div></div>
+      </nav>
+      <div class="destination__container">
+        <!-- <img class="bg__img__1" src="assets/img/bg-dots.png" alt="bg" />
+        <img class="bg__img__2" src="assets/img/bg-arrow.png" alt="bg" /> -->
+        <div class="socials">
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-youtube-fill"></i></span>
+        </div>
+        <div class="content">
+          <h1>EXPLORE<br />DREAM<br /><span>DESTINATION</span></h1>
+          <p>
+            It encourages exploration of unfamiliar territories, embracing
+            diverse cultures and landscapes, while pursuing the desired
+            destination that captivates the heart and ignites a sense of wonder.
+          </p>
+          <a href="https://wa.me/919645013513" target="_blank"><button class="btn">CONTACT US</button></a>
+        </div>
+        <!-- <div class="destination__grid">
+          <div class="destination__card">
+            <img src="assets/img/destination-1.jpg" alt="destination" />
+            <div class="card__content">
+              <h4>10 Must-Visit Hidden Gems</h4>
+              <p>
+                Discover off-the-beaten-path locations and hidden gems within
+                dream destinations, taking you beyond the typical tourist spots.
+              </p>
+              <button class="btn">Read More</button>
+            </div>
+          </div>
+          <div class="destination__card">
+            <img src="assets/img/destination-2.jpg" alt="destination" />
+            <div class="card__content">
+              <h4>Immersive Cultural Experiences</h4>
+              <p>
+                Dive deep into the vibrant cultures of dream destinations,
+                showcasing the rituals, traditions, and local customs that make
+                these places truly unique.
+              </p>
+              <button class="btn">Read More</button>
+            </div>
+          </div>
+          <div class="destination__card">
+            <img src="assets/img/destination-3.jpg" alt="destination" />
+            <div class="card__content">
+              <h4>From Dreams to Reality</h4>
+              <p>
+                Explore expert tips, and hidden gems, ensuring every moment of
+                your trip is optimized, and make the most of time in your
+                long-awaited dream location.
+              </p>
+              <button class="btn">Read More</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+
+
+
+
+    <!-- About Us Section -->
+    <section class="tag about" id="about-us">
+      <h2>About Us</h2>
+      <div class="underline"></div>
+      <p>
+        Sunshine Vacations & Tourism is dedicated to offering the best travel experiences by 
+        helping you explore exotic destinations around the world. Our team of travel experts 
+        ensures that every trip is a memorable one, catering to your every need and creating 
+        unforgettable memories.
+      </p>
+      <!-- <img src="assets/img/about-us1.jpg"  alt="About Us" /> -->
+      <img src="assets/img/about-us2.jpg"  alt="About Us" />
+      <img src="assets/img/about-us3.jpg"  alt="About Us" />
+      <img src="assets/img/about-us4.jpg"  alt="About Us" />
+      <img src="assets/img/about-us5.jpg"  alt="About Us" />
+      <img src="assets/img/about-us6.jpg"  alt="About Us" />
+      <img src="assets/img/about-us7.jpg"  alt="About Us" />
+    </section>
+
+
+
+
+
+    <!-- Packages Section -->
+    <section class="tag packages" id="packages">
+      <div class="container">
+        <h2>Our Packages</h2>
+        <div class="underline"></div>
+
+        <!-- Filters -->
+        <div class="btncontainer" id="btncontainer">
+          <button class="btn active" onclick="filterSelection('all')">All</button>
+          <button class="btn" onclick="filterSelection('domestic')">Domestic</button>
+          <button class="btn" onclick="filterSelection('international')">International</button>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="cards-container">
+          <!-- International Destinations -->
+
+          <div class="card domestic">
+            <img src="assets/img/kerala.jpg" alt="Kerala" />
+            <h3>Kerala</h3>
+            <p>Kerala, in South India, is famous for its backwaters, palm-lined beaches, and rich cultural traditions.</p>
+          </div>
+
+          <div class="card domestic">
+            <img src="assets/img/tamil-nadu.jpg" alt="Tamil Nadu" />
+            <h3>Tamil Nadu</h3>
+            <p>Tamil Nadu, in southern India, is known for its Dravidian-style temples, beaches, and classical arts.</p>
+          </div>
+
+          <div class="card domestic">
+            <img src="assets/img/karnataka.jpg" alt="Karnataka" />
+            <h3>Karnataka</h3>
+            <p>Karnataka is home to bustling cities, lush forests, and beautiful beaches, with a rich cultural history.</p>
+          </div>
+
+          <div class="card domestic">
+            <img src="assets/img/kashmir.jpg" alt="Kashmir" />
+            <h3>Kashmir</h3>
+            <p>Kashmir, known as "Paradise on Earth," offers stunning landscapes, including valleys, lakes, and mountains.</p>
+          </div>
+
+          <div class="card domestic">
+            <img src="assets/img/andaman.jpg" alt="Andaman" />
+            <h3>Andaman</h3>
+            <p>The Andaman Islands are known for their palm-lined, white-sand beaches, mangroves, and tropical rainforests.</p>
+          </div>
+          
+          <div class="card international">
+            <img src="assets/img/bali.jpg" alt="Bali" />
+            <h3>Bali</h3>
+            <p>Bali, Indonesia, is known for its forested volcanic mountains, iconic rice paddies, beaches, and coral reefs.</p>
+          </div>
+          
+          <div class="card international">
+            <img src="assets/img/baku.jpg" alt="Baku" />
+            <h3>Baku</h3>
+            <p>Baku, the capital of Azerbaijan, is famous for its medieval walled old city and contemporary architecture.</p>
+          </div>
+          
+          <div class="card international">
+            <img src="assets/img/bhutan.jpg" alt="Bhutan" />
+            <h3>Bhutan</h3>
+            <p>Bhutan, a Buddhist kingdom on the Himalayas' eastern edge, is known for its monasteries, fortresses, and dramatic landscapes.</p>
+          </div>
+          
+          <div class="card international">
+            <img src="assets/img/dubai.jpg" alt="Dubai" />
+            <h3>Dubai</h3>
+            <p>Dubai, a city in the United Arab Emirates, is known for its modern architecture, luxury shopping, and vibrant nightlife.</p>
+          </div>
+          
+          <div class="card domestic">
+            <img src="assets/img/goa.jpg" alt="Goa" />
+            <h3>Goa</h3>
+            <p>Goa, a state in western India, is renowned for its beaches, Portuguese heritage, and vibrant nightlife.</p>
+          </div>
+          
+          <div class="card domestic">
+            <img src="assets/img/himachal.jpg" alt="Himachal" />
+            <h3>Himachal</h3>
+            <p>Himachal Pradesh is known for its scenic mountain towns, resorts, and trekking trails.</p>
+          </div>
+          
+          <div class="card international">
+            <img src="assets/img/nepal.jpg" alt="Nepal" />
+            <h3>Nepal</h3>
+            <p>Nepal, home to Mount Everest, offers scenic mountain views, trekking routes, and rich cultural heritage.</p>
+          </div>
+          
+          <div class="card domestic">
+            <img src="assets/img/leh-ladakh.jpg" alt="Leh Ladakh" />
+            <h3>Leh Ladakh</h3>
+            <p>Leh Ladakh, a region in northern India, is known for its stark landscapes and Buddhist monasteries.</p>
+          </div>
+          
+          <div class="card international">
+            <img src="assets/img/singapore.jpg" alt="Singapore" />
+            <h3>Singapore</h3>
+            <p>Singapore, a global financial hub, is known for its modern skyline, diverse culture, and lush green spaces.</p>
+          </div>
+          
+          <div class="card international">
+            <img src="assets/img/srilanka.jpg" alt="Srilanka" />
+            <h3>Srilanka</h3>
+            <p>Srilanka, an island nation, is famous for its ancient ruins, pristine beaches, and diverse wildlife.</p>
+          </div>
+          
+          <div class="card domestic">
+            <img src="assets/img/north-east.jpg" alt="North East" />
+            <h3>North East</h3>
+            <p>Meghalaya, in northeast India, is known for its living root bridges, caves, and high rainfall.</p>
+          </div>
+          
+          <div class="card domestic">
+            <img src="assets/img/maharashtra-1.jpg" alt="Maharashtra" />
+            <h3>Maharashtra</h3>
+            <p>Maharashtra is home to bustling cities, ancient cave temples, and beautiful hill stations.</p>
+          </div>
+          
+          <div class="card domestic">
+            <img src="assets/img/rajasthan-1.jpg" alt="Rajasthan" />
+            <h3>Rajasthan</h3>
+            <p>Rajasthan, a state in northern India, is famous for its deserts, palaces, and vibrant culture.</p>
+          </div>
+          
+          <div class="card domestic">
+            <img src="assets/img/sikkim-darjeeling.jpg" alt="Sikkim + Darjeeling" />
+            <h3>Sikkim + Darjeeling</h3>
+            <p>Sikkim and Darjeeling are known for their tea gardens, scenic beauty, and vibrant culture.</p>
+          </div>
+          
+          <div class="card international">
+            <img src="assets/img/thailand.jpg" alt="Thailand" />
+            <h3>Thailand</h3>
+            <p>Thailand is known for its tropical beaches, opulent royal palaces, ancient ruins, and ornate temples.</p>
+          </div>
+          
+          <div class="card domestic">
+            <img src="assets/img/uttarakhand.jpg" alt="Uttarakhand" />
+            <h3>Uttarakhand</h3>
+            <p>Uttarakhand, known as the 'Land of the Gods,' is famous for its Hindu temples, trekking routes, and natural beauty.</p>
+          </div>
+          
+          <div class="card international">
+            <img src="assets/img/vietnam-cambodia.jpg" alt="Vietnam + Cambodia" />
+            <h3>Vietnam + Cambodia</h3>
+            <p>Vietnam and Cambodia offer a blend of vibrant cities, ancient temples, and beautiful landscapes.</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+
+    <section id="team" class="tag team-section">
+      <h2>Meet Our Team</h2>
+      <div class="underline"></div>
+      <div class="team-slider">
+        <div class="team-card">
+          <img src="assets/img/team-member2.jpg" alt="Team Member 1">
+          <h3>John Doe</h3>
+          <p>CEO & Founder</p>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="assets/img/team-member2.jpg" alt="Team Member 2">
+          <h3>Jane Smith</h3>
+          <p>Marketing Head</p>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="assets/img/team-member2.jpg" alt="Team Member 2">
+          <h3>Jane Smith</h3>
+          <p>Marketing Head</p>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="assets/img/team-member2.jpg" alt="Team Member 2">
+          <h3>Jane Smith</h3>
+          <p>Marketing Head</p>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="assets/img/team-member2.jpg" alt="Team Member 2">
+          <h3>Jane Smith</h3>
+          <p>Marketing Head</p>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="assets/img/team-member2.jpg" alt="Team Member 2">
+          <h3>Jane Smith</h3>
+          <p>Marketing Head</p>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="assets/img/team-member2.jpg" alt="Team Member 2">
+          <h3>Jane Smith</h3>
+          <p>Marketing Head</p>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <!-- Add more team members as needed -->
+      </div>
+    </section>
+    
+    <!-- Office Pictures -->
+    <section id="gallery" class="tag gallery-section">
+      <h2>Our Office Gallery</h2>
+      <div class="underline"></div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/img/about-us2.jpg" alt="Office Picture 1">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/img/about-us2.jpg" alt="Office Picture 2">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/img/about-us2.jpg" alt="Office Picture 3">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/img/about-us2.jpg" alt="Office Picture 4">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/img/about-us2.jpg" alt="Office Picture 5">
+        </div>
+        <!-- Add more gallery items as needed -->
+      </div>
+    </section>
+    
+
+    <!-- Contact Us -->
+    <section id="contact-us" class="tag contact-section">
+      <h2>Contact Us</h2>
+      <div class="underline"></div>
+      <div class="contact-info">
+        <div class="contact-details">
+          <p><strong>Mobile:</strong> <a href="tel:+919876543210">+91 9876543210</a>, <a href="tel:+919123456780">+91 9123456780</a></p>
+          <p><strong>Telephone:</strong> <a href="tel:+919123456780">+91 9123456780</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info.sunshinevacations@gmail.com">Your Mail ID</a></p>
+          <p><strong>Location:</strong> Your Address</p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/919876543210" target="_blank">Contact us on WhatsApp</a></p>
+          
+        </div>
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4016656.4457586887!2d73.49656717424529!3d10.538730106895194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0812ffd49cf55b%3A0x64bd90fbed387c99!2sKerala!5e0!3m2!1sen!2sin!4v1769855471004!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- <footer>
+      <div class="footer-container">
+          <div class="footer-about">
+              <h3>Sunshine Vacations & Tourism</h3>
+              <p>Your perfect vacation partner. 
+                At sunshine vacation and tourism, we believe that travel should be accessible to everyone. 
+                That's why we started our company with the goal of creating affordable travel packages that cater to all types of travelers.
+                We offer the best domestic and international travel packages tailored to your needs.
+              </p>
+          </div>
+          
+          <div class="footer-quick-links">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="#hero">Cancellation Policy</a></li>
+                  <li><a href="#hero">Terms & Conditions</a></li>
+                  <li><a href="#hero">Refund Policy</a></li>
+                  <li><a href="#hero">Reschedule / Date Change Policy</a></li>
+                  
+              </ul>
+          </div>
+  
+          <div class="footer-contact">
+              <h3>Contact Us</h3>
+              <p><strong>Mobile:</strong> <a href="tel:+919599329917">+91 9599329917</a>, <a href="tel:+919599329928">+91 9599329928</a></p>
+              <p><strong>Telephone:</strong> <a href="tel:+911146109357">011-46109357</a></p>
+              <p><strong>Email:</strong> <a href="mailto:info.sunshinevacations@gmail.com">info.sunshinevacations@gmail.com</a></p>
+              <p><strong>Location:</strong> St. No. 8, Plot No. 308, Main market, Sant Nagar, Burari, Delhi-110084</p>
+              <a href="https://wa.me/919599329928" class="whatsapp-link" target="_blank">Chat with us on WhatsApp</a>
+          </div>
+      </div>
+  
+      <div class="footer-bottom">
+          <p>&copy; 2024 Sunshine Vacations & Tourism. All rights reserved.</p>
+      </div>
+  </footer> -->
+
+  
+  <footer>
+    <div class="footer-container">
+        <!-- <div class="footer-about">
+            <h3>Sunshine Vacations & Tourism</h3>
+            <p>Your perfect vacation partner. 
+              At Sunshine Vacation and Tourism, we believe that travel should be accessible to everyone. 
+              That's why we started our company with the goal of creating affordable travel packages that cater to all types of travelers.
+              We offer the best domestic and international travel packages tailored to your needs.
+            </p>
+        </div> -->
+        
+        <div class="footer-quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#hero">Cancellation Policy</a></li>
+                <li><a href="#hero">Terms & Conditions</a></li>
+                <li><a href="#hero">Refund Policy</a></li>
+                <li><a href="#hero">Reschedule / Date Change Policy</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><strong>Mobile:</strong> <a href="tel:+919876543210">+91 9876543210</a>, <a href="tel:+919123456780">+91 9123456780</a></p>
+            <p><strong>Telephone:</strong> <a href="tel:+919123456780">+91 9123456780</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info.sunshinevacations@gmail.com">Your Mail ID</a></p>
+            <p><strong>Location:</strong> Your Address</p>
+            <a href="https://wa.me/919123456780" class="whatsapp-link" target="_blank">Chat with us on WhatsApp</a>
+        </div>
+  
+        <div class="footer-payment-methods">
+            <h3>Payment Methods Accepted</h3>
+            <div class="payment-icons">
+                <img src="assets/img/google-pay-mark.png" alt="Google Pay">
+                <img src="assets/img/paypal.png" alt="PayPal">
+                <img src="assets/img/cash.png" alt="Cash">
+                <!-- <img src="assets/img/bank.png" alt="Bank Transfer"> -->
+            </div>
+
+            
+        </div>
+    </div>
+  
+    <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Bewin Bobby. All rights reserved.</p>
+    </div>
+  </footer>
+  
+    <script src="assets/js/scripts.js"></script>
+    <button id="backToTop"><i class="ri-arrow-up-line"></i></button>
+    <script>
+      const backToTop = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          backToTop.style.display = "block";
+        } else {
+          backToTop.style.display = "none";
+        }
+      });
+
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
