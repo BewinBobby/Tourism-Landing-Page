@@ -6,9 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <title>Sunshine Vacation & Tourism</title>
+    <title>Blue Horizon Travels</title>
     <script>
-      $(document).on("scroll", function() {
+      function revealTags() {
         var pageTop = $(document).scrollTop();
         var pageBottom = pageTop + $(window).height();
         var tags = $(".tag");
@@ -21,7 +21,10 @@
             $(tag).removeClass("visible");
           }
         }
-      });
+      }
+
+      $(document).on("scroll", revealTags);
+      $(document).ready(revealTags);
     </script>
   </head>
   <body>
@@ -30,12 +33,15 @@
         <div class="nav__logo">
           <img src="assets/img/logo.png" alt="logo" />
         </div>
-        <ul class="nav__links">
+        <ul class="nav__links" id="navLinks">
           <li class="link"><a href="#hero">Home</a></li>
           <li class="link"><a href="#about-us">About Us</a></li>
           <li class="link"><a href="#packages">Destinations</a></li>
           <li class="link"><a href="#contact-us">Contact Us</a></li>
         </ul>
+        <button id="navToggle" class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <i class="ri-menu-line"></i>
+        </button>
         <!-- <div class="search">
           <input type="text" placeholder="Search" />
           <span><i class="ri-search-line"></i></span>
@@ -44,7 +50,6 @@
           <span><i class="ri-user-3-fill"></i></span>
           Log In
         </div> -->
-        <div></div>
       </nav>
       <div class="destination__container">
         <!-- <img class="bg__img__1" src="assets/img/bg-dots.png" alt="bg" />
@@ -113,18 +118,20 @@
       <h2>About Us</h2>
       <div class="underline"></div>
       <p>
-        Sunshine Vacations & Tourism is dedicated to offering the best travel experiences by 
-        helping you explore exotic destinations around the world. Our team of travel experts 
-        ensures that every trip is a memorable one, catering to your every need and creating 
+        Blue Horizon Travels is dedicated to offering the best travel experiences by
+        helping you explore exotic destinations around the world. Our team of travel experts
+        ensures that every trip is a memorable one, catering to your every need and creating
         unforgettable memories.
       </p>
-      <!-- <img src="assets/img/about-us1.jpg"  alt="About Us" /> -->
-      <img src="assets/img/about-us2.jpg"  alt="About Us" />
-      <img src="assets/img/about-us3.jpg"  alt="About Us" />
-      <img src="assets/img/about-us4.jpg"  alt="About Us" />
-      <img src="assets/img/about-us5.jpg"  alt="About Us" />
-      <img src="assets/img/about-us6.jpg"  alt="About Us" />
-      <img src="assets/img/about-us7.jpg"  alt="About Us" />
+      <div class="about__grid">
+        <!-- <img src="assets/img/about-us1.jpg"  alt="About Us" /> -->
+        <img src="assets/img/about-us2.jpg"  alt="About Us" />
+        <img src="assets/img/about-us3.jpg"  alt="About Us" />
+        <img src="assets/img/about-us4.jpg"  alt="About Us" />
+        <img src="assets/img/about-us5.jpg"  alt="About Us" />
+        <img src="assets/img/about-us6.jpg"  alt="About Us" />
+        <img src="assets/img/about-us7.jpg"  alt="About Us" />
+      </div>
     </section>
 
 
@@ -367,7 +374,7 @@
     <section id="gallery" class="tag gallery-section">
       <h2>Our Office Gallery</h2>
       <div class="underline"></div>
-      <div class="gallery-grid">
+      <div class="gallery-grid" id="galleryGrid">
         <div class="gallery-item">
           <img src="assets/img/about-us2.jpg" alt="Office Picture 1">
         </div>
@@ -412,54 +419,8 @@
 
 
 
-    <!-- <footer>
-      <div class="footer-container">
-          <div class="footer-about">
-              <h3>Sunshine Vacations & Tourism</h3>
-              <p>Your perfect vacation partner. 
-                At sunshine vacation and tourism, we believe that travel should be accessible to everyone. 
-                That's why we started our company with the goal of creating affordable travel packages that cater to all types of travelers.
-                We offer the best domestic and international travel packages tailored to your needs.
-              </p>
-          </div>
-          
-          <div class="footer-quick-links">
-              <h3>Quick Links</h3>
-              <ul>
-                  <li><a href="#hero">Cancellation Policy</a></li>
-                  <li><a href="#hero">Terms & Conditions</a></li>
-                  <li><a href="#hero">Refund Policy</a></li>
-                  <li><a href="#hero">Reschedule / Date Change Policy</a></li>
-                  
-              </ul>
-          </div>
-  
-          <div class="footer-contact">
-              <h3>Contact Us</h3>
-              <p><strong>Mobile:</strong> <a href="tel:+919599329917">+91 9599329917</a>, <a href="tel:+919599329928">+91 9599329928</a></p>
-              <p><strong>Telephone:</strong> <a href="tel:+911146109357">011-46109357</a></p>
-              <p><strong>Email:</strong> <a href="mailto:info.sunshinevacations@gmail.com">info.sunshinevacations@gmail.com</a></p>
-              <p><strong>Location:</strong> St. No. 8, Plot No. 308, Main market, Sant Nagar, Burari, Delhi-110084</p>
-              <a href="https://wa.me/919599329928" class="whatsapp-link" target="_blank">Chat with us on WhatsApp</a>
-          </div>
-      </div>
-  
-      <div class="footer-bottom">
-          <p>&copy; 2024 Sunshine Vacations & Tourism. All rights reserved.</p>
-      </div>
-  </footer> -->
-
-  
   <footer>
     <div class="footer-container">
-        <!-- <div class="footer-about">
-            <h3>Sunshine Vacations & Tourism</h3>
-            <p>Your perfect vacation partner. 
-              At Sunshine Vacation and Tourism, we believe that travel should be accessible to everyone. 
-              That's why we started our company with the goal of creating affordable travel packages that cater to all types of travelers.
-              We offer the best domestic and international travel packages tailored to your needs.
-            </p>
-        </div> -->
         
         <div class="footer-quick-links">
             <h3>Quick Links</h3>
@@ -497,7 +458,21 @@
         <p>&copy; <span id="year"></span> Bewin Bobby. All rights reserved.</p>
     </div>
   </footer>
-  
+
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close" id="lightboxClose">&times;</span>
+      <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+        <i class="ri-arrow-left-s-line"></i>
+      </button>
+      <div class="lightbox-main">
+        <img src="" alt="" id="lightboxImg">
+        <div class="lightbox-thumbs" id="lightboxThumbs"></div>
+      </div>
+      <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next image">
+        <i class="ri-arrow-right-s-line"></i>
+      </button>
+    </div>
+
     <script src="assets/js/scripts.js"></script>
     <button id="backToTop"><i class="ri-arrow-up-line"></i></button>
     <script>
