@@ -6,9 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <title>Sunshine Vacation & Tourism</title>
+    <title>Blue Horizon Travels</title>
     <script>
-      $(document).on("scroll", function() {
+      function revealTags() {
         var pageTop = $(document).scrollTop();
         var pageBottom = pageTop + $(window).height();
         var tags = $(".tag");
@@ -21,7 +21,10 @@
             $(tag).removeClass("visible");
           }
         }
-      });
+      }
+
+      $(document).on("scroll", revealTags);
+      $(document).ready(revealTags);
     </script>
   </head>
   <body>
@@ -30,20 +33,23 @@
         <div class="nav__logo">
           <img src="assets/img/logo.png" alt="logo" />
         </div>
-        <ul class="nav__links">
+        <ul class="nav__links" id="navLinks">
           <li class="link"><a href="#hero">Home</a></li>
           <li class="link"><a href="#about-us">About Us</a></li>
           <li class="link"><a href="#packages">Destinations</a></li>
           <li class="link"><a href="#contact-us">Contact Us</a></li>
         </ul>
+        <button id="navToggle" class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <i class="ri-menu-line"></i>
+        </button>
         <!-- <div class="search">
           <input type="text" placeholder="Search" />
           <span><i class="ri-search-line"></i></span>
         </div> -->
-        <div class="login">
+        <!-- <div class="login">
           <span><i class="ri-user-3-fill"></i></span>
           Log In
-        </div>
+        </div> -->
       </nav>
       <div class="destination__container">
         <!-- <img class="bg__img__1" src="assets/img/bg-dots.png" alt="bg" />
@@ -61,7 +67,7 @@
             diverse cultures and landscapes, while pursuing the desired
             destination that captivates the heart and ignites a sense of wonder.
           </p>
-          <a href="https://wa.me/919599329928" target="_blank"><button class="btn">CONTACT US</button></a>
+          <a href="https://wa.me/919645013513" target="_blank"><button class="btn">CONTACT US</button></a>
         </div>
         <!-- <div class="destination__grid">
           <div class="destination__card">
@@ -112,18 +118,20 @@
       <h2>About Us</h2>
       <div class="underline"></div>
       <p>
-        Sunshine Vacations & Tourism is dedicated to offering the best travel experiences by 
-        helping you explore exotic destinations around the world. Our team of travel experts 
-        ensures that every trip is a memorable one, catering to your every need and creating 
+        Blue Horizon Travels is dedicated to offering the best travel experiences by
+        helping you explore exotic destinations around the world. Our team of travel experts
+        ensures that every trip is a memorable one, catering to your every need and creating
         unforgettable memories.
       </p>
-      <!-- <img src="assets/img/about-us1.jpg"  alt="About Us" /> -->
-      <img src="assets/img/about-us2.jpg"  alt="About Us" />
-      <img src="assets/img/about-us3.jpg"  alt="About Us" />
-      <img src="assets/img/about-us4.jpg"  alt="About Us" />
-      <img src="assets/img/about-us5.jpg"  alt="About Us" />
-      <img src="assets/img/about-us6.jpg"  alt="About Us" />
-      <img src="assets/img/about-us7.jpg"  alt="About Us" />
+      <div class="about__grid">
+        <!-- <img src="assets/img/about-us1.jpg"  alt="About Us" /> -->
+        <img src="assets/img/about-us2.jpg"  alt="About Us" />
+        <img src="assets/img/about-us3.jpg"  alt="About Us" />
+        <img src="assets/img/about-us4.jpg"  alt="About Us" />
+        <img src="assets/img/about-us5.jpg"  alt="About Us" />
+        <img src="assets/img/about-us6.jpg"  alt="About Us" />
+        <img src="assets/img/about-us7.jpg"  alt="About Us" />
+      </div>
     </section>
 
 
@@ -366,7 +374,7 @@
     <section id="gallery" class="tag gallery-section">
       <h2>Our Office Gallery</h2>
       <div class="underline"></div>
-      <div class="gallery-grid">
+      <div class="gallery-grid" id="galleryGrid">
         <div class="gallery-item">
           <img src="assets/img/about-us2.jpg" alt="Office Picture 1">
         </div>
@@ -393,69 +401,26 @@
       <div class="underline"></div>
       <div class="contact-info">
         <div class="contact-details">
-          <p><strong>Mobile:</strong> <a href="tel:+919599329917">+91 9599329917</a>, <a href="tel:+919599329928">+91 9599329928</a></p>
-          <p><strong>Telephone:</strong> <a href="tel:+911146109357">011-46109357</a></p>
-          <p><strong>Email:</strong> <a href="mailto:info.sunshinevacations@gmail.com">info.sunshinevacations@gmail.com</a></p>
-          <p><strong>Office:</strong> St. No. 8, Plot No. 308, Main market, Sant Nagar, Burari, Delhi-110084</p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/919599329928" target="_blank">Contact us on WhatsApp</a></p>
+          <p><strong>Mobile:</strong> <a href="tel:+919876543210">+91 9876543210</a>, <a href="tel:+919123456780">+91 9123456780</a></p>
+          <p><strong>Telephone:</strong> <a href="tel:+919123456780">+91 9123456780</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info.sunshinevacations@gmail.com">Your Mail ID</a></p>
+          <p><strong>Location:</strong> Your Address</p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/919876543210" target="_blank">Contact us on WhatsApp</a></p>
           
         </div>
         <div class="contact-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13993.218289395336!2d77.1950869!3d28.7403221!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cff0ab5071c3d%3A0x96ec768984ce5f95!2sSunshine%20Vacations%20And%20Tourism!5e0!3m2!1sen!2sin!4v1723746828058!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4016656.4457586887!2d73.49656717424529!3d10.538730106895194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0812ffd49cf55b%3A0x64bd90fbed387c99!2sKerala!5e0!3m2!1sen!2sin!4v1769855471004!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
 
 
 
-    <!-- <footer>
-      <div class="footer-container">
-          <div class="footer-about">
-              <h3>Sunshine Vacations & Tourism</h3>
-              <p>Your perfect vacation partner. 
-                At sunshine vacation and tourism, we believe that travel should be accessible to everyone. 
-                That's why we started our company with the goal of creating affordable travel packages that cater to all types of travelers.
-                We offer the best domestic and international travel packages tailored to your needs.
-              </p>
-          </div>
-          
-          <div class="footer-quick-links">
-              <h3>Quick Links</h3>
-              <ul>
-                  <li><a href="#hero">Cancellation Policy</a></li>
-                  <li><a href="#hero">Terms & Conditions</a></li>
-                  <li><a href="#hero">Refund Policy</a></li>
-                  <li><a href="#hero">Reschedule / Date Change Policy</a></li>
-                  
-              </ul>
-          </div>
-  
-          <div class="footer-contact">
-              <h3>Contact Us</h3>
-              <p><strong>Mobile:</strong> <a href="tel:+919599329917">+91 9599329917</a>, <a href="tel:+919599329928">+91 9599329928</a></p>
-              <p><strong>Telephone:</strong> <a href="tel:+911146109357">011-46109357</a></p>
-              <p><strong>Email:</strong> <a href="mailto:info.sunshinevacations@gmail.com">info.sunshinevacations@gmail.com</a></p>
-              <p><strong>Location:</strong> St. No. 8, Plot No. 308, Main market, Sant Nagar, Burari, Delhi-110084</p>
-              <a href="https://wa.me/919599329928" class="whatsapp-link" target="_blank">Chat with us on WhatsApp</a>
-          </div>
-      </div>
-  
-      <div class="footer-bottom">
-          <p>&copy; 2024 Sunshine Vacations & Tourism. All rights reserved.</p>
-      </div>
-  </footer> -->
-
-  
   <footer>
     <div class="footer-container">
-        <!-- <div class="footer-about">
-            <h3>Sunshine Vacations & Tourism</h3>
-            <p>Your perfect vacation partner. 
-              At Sunshine Vacation and Tourism, we believe that travel should be accessible to everyone. 
-              That's why we started our company with the goal of creating affordable travel packages that cater to all types of travelers.
-              We offer the best domestic and international travel packages tailored to your needs.
-            </p>
-        </div> -->
         
         <div class="footer-quick-links">
             <h3>Quick Links</h3>
@@ -469,11 +434,11 @@
   
         <div class="footer-contact">
             <h3>Contact Us</h3>
-            <p><strong>Mobile:</strong> <a href="tel:+919599329917">+91 9599329917</a>, <a href="tel:+919599329928">+91 9599329928</a></p>
-            <p><strong>Telephone:</strong> <a href="tel:+911146109357">011-46109357</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info.sunshinevacations@gmail.com">info.sunshinevacations@gmail.com</a></p>
-            <p><strong>Location:</strong> St. No. 8, Plot No. 308, Main market, Sant Nagar, Burari, Delhi-110084</p>
-            <a href="https://wa.me/919599329928" class="whatsapp-link" target="_blank">Chat with us on WhatsApp</a>
+            <p><strong>Mobile:</strong> <a href="tel:+919876543210">+91 9876543210</a>, <a href="tel:+919123456780">+91 9123456780</a></p>
+            <p><strong>Telephone:</strong> <a href="tel:+919123456780">+91 9123456780</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info.sunshinevacations@gmail.com">Your Mail ID</a></p>
+            <p><strong>Location:</strong> Your Address</p>
+            <a href="https://wa.me/919123456780" class="whatsapp-link" target="_blank">Chat with us on WhatsApp</a>
         </div>
   
         <div class="footer-payment-methods">
@@ -490,12 +455,45 @@
     </div>
   
     <div class="footer-bottom">
-        <p>&copy; 2024 Sunshine Vacations & Tourism. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Bewin Bobby. All rights reserved.</p>
     </div>
   </footer>
-  
-    
+
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close" id="lightboxClose">&times;</span>
+      <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+        <i class="ri-arrow-left-s-line"></i>
+      </button>
+      <div class="lightbox-main">
+        <img src="" alt="" id="lightboxImg">
+        <div class="lightbox-thumbs" id="lightboxThumbs"></div>
+      </div>
+      <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next image">
+        <i class="ri-arrow-right-s-line"></i>
+      </button>
+    </div>
 
     <script src="assets/js/scripts.js"></script>
+    <button id="backToTop"><i class="ri-arrow-up-line"></i></button>
+    <script>
+      const backToTop = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          backToTop.style.display = "block";
+        } else {
+          backToTop.style.display = "none";
+        }
+      });
+
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
