@@ -118,6 +118,7 @@ galleryImages.forEach((img, index) => {
   img.addEventListener("click", () => openLightbox(index));
 
   const thumb = document.createElement("img");
+  thumb.loading = "lazy";
   thumb.src = img.src;
   thumb.alt = img.alt;
   thumb.addEventListener("click", () => showImage(index));
